@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+
+}
+
+.bg-primary {
+    background-color: #ebebeb;
+}
+
+.clr-accent {
+    color: #ff214f !important;
+}
+
+.split {
+    /* display:flex; */
+}
+
+.grid {
+    display: grid;
+
+}
+
+.span-2 {
+    grid-row: span 2;
+}
+
+section {
+    padding-block: 2.5rem;
+}
+
+.container {
+    width: min(85%, 80rem);
+    margin-inline: auto;
+}
+
+.brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black
+}
+
+
+/* navigation */
+
+header {
+    background-color: #ebebeb;
+
+}
+
+nav {
+    padding-block: 1rem;
+    text-align: center;
+
+}
+
+.nav__link {
+    padding: .5em;
+    display: inline-block;
+    width: 100%;
+}
+
+.nav__link:hover {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.section__title,
+.preposition {
+    text-align: center;
+}
+
+.preposition {
+    color: #919191;
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+.bg-primary .preposition {
+    color: #1c1c1c;
+}
+
+.bg-secondary {
+    background-color: #1c1c1c;
+}
+
+.bg-secondary .section__title {
+    color: #ebebeb;
+}
+
+.section__title {
+    font-size: clamp(1rem, 1rem + 3vw, 4rem);
+    margin-top: 0;
+    font-weight: 300;
+    color: #1c1c1c;
+}
+
+.logos {
+    text-align: center;
+}
+
+.logos a {
+    display: inline-block
+}
+
+.logos img {
+    width: 75%;
+}
+
+
+footer {
+    text-align: center;
+    color: #919191;
+    padding-block: 1rem;
+}
+
+.social-icons i {
+    margin-inline: .5rem
+}
+
+.social-icons {
+    color: black
+}
+
+@media screen and (min-width:40rem) {
+    section {
+        padding-block: 5rem
+    }
+
+    .section__title {
+        text-align: left;
+    }
+
+    .split {
+        display: flex;
+        align-items: center;
+    }
+
+    nav,
+    footer .split {
+        justify-content: space-between;
+    }
+
+    .line {
+        border-top: 1px solid var(--clr-hr, #ff214f);
+        flex: 1;
+        margin-left: .5rem;
+    }
+
+    .line--primary {
+        --clr-hr: #1c1c1c;
+    }
+
+    .line--secondary {
+        --clr-hr: #919191
+    }
+
+    .logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width:60rem) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
